@@ -11,6 +11,12 @@ The primary evidence examined in this investigation consisted of a forensic imag
 ## Hash Verification
 To ensure evidence integrity, cryptographic hash values were generated prior to analysis and verified upon completion.
 
+### Screenshot: Image Hash Verification
+![FTK Imager hash verification showing MD5 and SHA1 match](Assets/screenshots/hash-verification-ftk.png)
+
+### Screenshot: Image Acquisition Summary
+![FTK Imager image summary showing acquisition and verification details](Assets/screenshots/image-summary-acquisition-details.png)
+
 | Artifact | MD5 | SHA-1 |
 |--------|-----|-------|
 | USB Image (Initial) | *documented* | *documented* |
