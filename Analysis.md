@@ -6,6 +6,12 @@ The forensic analysis focused on identifying potentially malicious artifacts pre
 ## File System and Signature Analysis
 The mounted forensic image was examined to enumerate files present on the USB device. File signature analysis was performed to compare file headers against their extensions in order to identify discrepancies indicative of file masquerading or obfuscation. Several files were identified with mismatched extensions, prompting further examination.
 
+### Screenshot: Mounted Image File Listing
+![Mounted forensic image showing recovered desktop files](Assets/screenshots/mounted-image-file-list.png)
+
+### Screenshot: File Metadata and Properties
+![File metadata and NTFS properties for recovered artifact](Assets/screenshots/file-metadata-properties.png)
+
 ## Executable File Examination
 Executable files identified during enumeration were isolated for closer review. File properties, including size, structure, and headers, were analyzed to assess legitimacy. Hash values were generated for identified executables and prepared for correlation against threat intelligence sources.
 
