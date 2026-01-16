@@ -1,25 +1,45 @@
 # Forensic Analysis
 
 ## Analysis Overview
-The forensic analysis focused on identifying potentially malicious artifacts present on the USB device, validating file authenticity, reconstructing user activity through metadata and timestamps, and correlating findings with available threat intelligence. All analysis was conducted using forensically sound methods to preserve evidence integrity.
+This forensic analysis focused on identifying potentially malicious artifacts present on a USB storage device, validating file authenticity, reconstructing activity timelines, and correlating findings with threat intelligence. All analysis was conducted using forensically sound methods to preserve evidence integrity and support defensible conclusions.
+
+---
 
 ## File System and Signature Analysis
-The mounted forensic image was examined to enumerate files present on the USB device. File signature analysis was performed to compare file headers against their extensions in order to identify discrepancies indicative of file masquerading or obfuscation. Several files were identified with mismatched extensions, prompting further examination.
+The forensic image of the USB device was mounted and examined to enumerate files present on the media. File signature analysis was performed to compare file headers against associated file extensions to identify inconsistencies indicative of file masquerading or obfuscation.
 
-### Screenshot: Mounted Image File Listing
-![Mounted forensic image showing recovered desktop files](Assets/screenshots/mounted-image-file-list.png)
+Multiple files were identified with mismatched signatures and extensions, prompting deeper examination due to the increased likelihood of malicious intent.
 
-### Screenshot: File Metadata and Properties
-![File metadata and NTFS properties for recovered artifact](Assets/screenshots/file-metadata-properties.png)
+**Supporting Evidence – Mounted Image File Listing:**  
+![Mounted forensic image showing recovered files](Assets/screenshots/mounted-image-file-list.png)
 
-## Executable File Examination
-Executable files identified during enumeration were isolated for closer review. File properties, including size, structure, and headers, were analyzed to assess legitimacy. Hash values were generated for identified executables and prepared for correlation against threat intelligence sources.
+**Supporting Evidence – File Metadata and Properties:**  
+![File metadata and properties for recovered artifact](Assets/screenshots/file-metadata-properties.png)
+
+---
+
+## Executable Artifact Examination
+Executable files identified during enumeration were isolated for further analysis. File properties, structure, and headers were reviewed to assess legitimacy and identify characteristics consistent with malicious executables.
+
+Cryptographic hash values were generated for identified artifacts to support reputation-based validation and external correlation.
+
+---
 
 ## Threat Intelligence Correlation
-Hashes of suspicious executable files were compared against indicators provided in a recent threat intelligence report. This process identified matches between files recovered from the USB device and known malicious signatures, increasing confidence that the artifacts posed a security risk.
+Hash values associated with suspicious executables were compared against indicators provided in a recent threat intelligence report. This comparison identified matches between files recovered from the USB device and known malicious signatures, increasing confidence that the artifacts represented a security risk rather than benign files.
+
+Threat intelligence correlation served as a key validation step in distinguishing confirmed malicious artifacts from false positives.
+
+---
 
 ## Timestamp and Metadata Analysis
-File metadata was analyzed to reconstruct activity related to file creation, modification, and access. Timestamp analysis indicated that multiple files were introduced within a narrow timeframe consistent with reported suspicious activity. Metadata and security identifier information was used to assess likely user attribution.
+File metadata was examined to reconstruct activity related to file creation, modification, and access. Timestamp analysis indicated that multiple suspicious files were introduced within a narrow timeframe consistent with the reported incident window.
 
-## Validation and Integrity Checks
-Hash verification was conducted at multiple stages throughout the investigation to ensure that evidence integrity was maintained. Final hash values matched initial acquisition values, confirming that no alterations occurred during analysis.
+Additional metadata and security identifier (SID) information was reviewed to support assessment of likely user attribution and device usage context.
+
+---
+
+## Validation and Integrity Controls
+Hash verification was performed at multiple stages throughout the investigation to ensure evidence integrity. Final hash values matched those recorded during initial acquisition, confirming that no alterations occurred during analysis.
+
+These controls support the reliability and defensibility of all analytical conclusions.
