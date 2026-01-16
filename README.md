@@ -22,14 +22,13 @@ This project demonstrates hands-on digital forensics and incident response (DFIR
 ## Repository Structure
 
 usb-forensic-investigation/
-├── Assets/
-│   └── screenshots/
-├── Executive-Summary.md
-├── Evidence.md
-├── Analysis.md
-├── Findings.md
-├── Recommendations.md
-└── README.md
+─ Assets/screenshots/
+─ Executive-Summary.md
+─ Evidence.md
+─ Analysis.md
+─ Findings.md
+─ Recommendations.md
+─ README.md
 
 ## Skills Demonstrated
 - Removable media forensic analysis
